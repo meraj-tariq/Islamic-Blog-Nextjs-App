@@ -4,8 +4,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 export default function Services() {
   const services = [
     {
-      title: "Islamic Education",
-      description: "Learn about Islamic teachings and principles from qualified scholars",
+      title: "COMPILATION AND COLLATION",
+      description: "Explore the meticulous process of the Quran's compilation and collation, ensuring its authenticity and preservation.",
       icon: Book,
     },
     {
@@ -23,7 +23,9 @@ export default function Services() {
   return (
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12">Our Services</h2>
+        <h2 className="text-4xl font-bold text-center mb-12">Learn QUR’AN Basic</h2>
+        {/* <h2 className="text-4xl font-bold text-center mb-12">Mission</h2> */}
+
         <div className="grid md:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <Card key={index} className="text-center">

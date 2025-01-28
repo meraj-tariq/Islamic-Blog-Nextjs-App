@@ -1,8 +1,9 @@
-import MainSection from "@/app/(DASHBOARD)/MainSection/page";
-import Services from "@/app/(DASHBOARD)/ServiceSection/page";
-import Events from "@/app/(DASHBOARD)/Event/page";
+import MainSection from "@/app/(DASHBOARD)/components/MainSection";
+import Services from "@/app/(DASHBOARD)/components/ServiceSection";
+import Events from "@/app/(DASHBOARD)/components/Event";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import MissionAndVissionPage from "@/app/(DASHBOARD)/components/MissionAndVisson/";
 
 export const metadata = {
   title: "Islamic University  Research",
@@ -14,6 +15,7 @@ export default function HomeLayout() {
     <div className="min-h-screen bg-gray-50">
       <Header />
       <MainSection />
+      <MissionAndVissionPage/>
       <Services />
       <Events />
       <Footer />
