@@ -40,10 +40,10 @@ export function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
             <ul className="space-y-2 text-gray-400">
-              <li>123 Islamic Center Street</li>
-              <li>City, State 12345</li>
-              <li>Phone: (123) 456-7890</li>
-              <li>Email: info@islamiccenter.com</li>
+              <li>Gulistan -e- Johar</li>
+              <li>Karachi, Sindh</li>
+              <li>Phone: 0310-2460554</li>
+              <li>Email: meraj.tarique1618@gmail.com</li>
             </ul>
           </div>
           <div>
