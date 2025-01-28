@@ -1,5 +1,5 @@
 import Head from "next/head";
-// import DashBoardLayout from "./layout";
+import DashBoardLayout from "./layout";
 
 export default function AdminBoard() {
   return (
@@ -21,7 +21,7 @@ export default function AdminBoard() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="min-h-screen">
-      {/* <DashBoardLayout/> */}
+      <DashBoardLayout/>
       </main>
     </div>
   );

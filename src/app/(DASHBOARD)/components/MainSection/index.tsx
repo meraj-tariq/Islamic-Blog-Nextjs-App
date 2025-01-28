@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 import bgImage from "@images/slide-2.jpg";
 import BismilAllah from "@images/bsml-txt.webp";
 
