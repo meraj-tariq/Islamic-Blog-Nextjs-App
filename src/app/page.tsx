@@ -1,9 +1,9 @@
 import Head from "next/head";
-import DashBoardLayout from "@/app/(ADMIN)/adminPage/layout";
+// import DashBoardLayout from "@/app/(ADMIN)/adminPage/layout";
 import HomePage from "@/app/(DASHBOARD)/layout"
 
 export default function Home() {
-  const isAdmin = true;
+  // const isAdmin = true;
   return (
     <div>
       <Head>
