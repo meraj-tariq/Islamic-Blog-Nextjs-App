@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  
+   output: 'standalone',
   reactStrictMode: true,
   swcMinify: true,
   images: {

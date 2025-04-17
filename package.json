@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postbuild": "next-sitemap"
+    "postbuild": "next-sitemap",
+    "postinstall": "next telemetry disable",
+    "vercel-build": "next build"
   },
   "engines": {
     "node": "20.14.0"
