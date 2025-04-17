@@ -5,9 +5,14 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
    output: 'standalone',
+   experimental: {
+    serverActions: true,
+    optimizePackageImports: true,
+    instrumentationHook: true,
+  },
   reactStrictMode: true,
-  swcMinify: true,
   images: {
+    unoptimized: true,
     domains: [
       "localhost",
       "hebbkx1anhila5yf.public.blob.vercel-storage.com",

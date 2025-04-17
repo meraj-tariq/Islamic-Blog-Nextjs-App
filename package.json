@@ -7,9 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postbuild": "next-sitemap",
-    "postinstall": "next telemetry disable",
-    "vercel-build": "next build"
+    "vercel-build": "npm run build && npm run postbuild",
+    "postbuild": "cp -r public .next/standalone/public/ || true"
   },
   "engines": {
     "node": "20.14.0"
@@ -22,6 +21,7 @@
     "@types/mongoose": "^5.11.97",
     "@types/next": "^9.0.0",
     "@types/nprogress": "^0.2.3",
+    "@vercel/next": "^4.7.7",
     "bcryptjs": "^2.4.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -36,7 +36,8 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwind-merge": "^2.6.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "vercel": "^41.6.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
