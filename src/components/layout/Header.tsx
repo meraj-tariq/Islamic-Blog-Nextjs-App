@@ -11,7 +11,7 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0)
+      setIsScrolled(window.scrollY > 50)
     }
 
     window.addEventListener('scroll', handleScroll)
@@ -21,7 +21,7 @@ export function Header() {
   return (
     <header className={cn(
       "fixed top-0 w-full z-50 transition-colors duration-300",
-      isScrolled ? "bg-slate-200 text-slate-950" : "bg-black text-white"
+      isScrolled ? "bg-white text-slate-950" : "bg-black text-white"
     )}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
