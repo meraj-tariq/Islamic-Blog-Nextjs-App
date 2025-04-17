@@ -6,9 +6,7 @@ const nextConfig: NextConfig = {
   },
    output: 'standalone',
    experimental: {
-    serverActions: true,
     optimizePackageImports: [],
-    instrumentationHook: true
   },
   typescript: {
     ignoreBuildErrors: true // Temporary if you have TS errors
