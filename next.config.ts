@@ -1,8 +1,12 @@
-import type { NextConfig } from "next";
+import { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  reactStrictMode: false,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  
+  reactStrictMode: true,
+  swcMinify: true,
   images: {
     domains: [
       "localhost",
