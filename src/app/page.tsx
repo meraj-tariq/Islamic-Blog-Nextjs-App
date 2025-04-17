@@ -1,9 +1,7 @@
 import Head from "next/head";
-// import DashBoardLayout from "@/app/(ADMIN)/adminPage/layout";
-import HomePage from "@/app/dashboard/layout"
+import HomePage from "@/app/(public)/layout";
 
 export default function Home() {
-  // const isAdmin = true;
   return (
     <div>
       <Head>
@@ -23,7 +21,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="min-h-screen">
-        {/* {!isAdmin ? <HomePage /> : <DashBoardLayout />} */}
         <HomePage />
       </main>
     </div>

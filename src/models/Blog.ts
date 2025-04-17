@@ -1,21 +1,65 @@
-import { Schema,  Document, } from "mongoose";
-import * as mongoose from "mongoose";
+import { Schema, Document, Types, model, models } from "mongoose";
 
+// Define BlogDocument Interface with Nested Content & Categories
 export interface BlogDocument extends Document {
   title: string;
-  content: string;
-  author: string;
+  slug: string;
+  author: Types.ObjectId;
+  featured_image?: string;
+  views: number;
+  content: ContentSection[];
+  createdAt: Date;
+  updatedAt: Date;
 }
 
-const BlogSchema: Schema = new mongoose.Schema(
+// Interface for Nested Content Structure
+interface ContentSection {
+  heading: string;
+  description?: string;
+  subcategories?: SubCategory[];
+}
+
+interface SubCategory {
+  subHeading: string;
+  subDescription: string;
+  subCategories?: SubSubCategory[];
+}
+
+interface SubSubCategory {
+  subSubHeading?: string;
+  subSubDescription?: string;
+}
+
+// Define Blog Schema
+const BlogSchema: Schema = new Schema(
   {
-    title: { type: String, required: true },
-    content: { type: String, required: true },
-    author: { type: String, required: true },
+    title: { type: String, required: true, trim: true },
+    slug: { type: String, required: false, unique: true, trim: true },
+    author: { type: Types.ObjectId, ref: "User", required: true },
+    featured_image: { type: String, required: false },
+    views: { type: Number, default: 0 },
+    content: [
+      {
+        heading: { type: String, required: true },
+        description: { type: String},
+        subcategories: [
+          {
+            subHeading: { type: String, required: false },
+            subDescription: { type: String, required: false },
+            subCategories: [
+              {
+                subSubHeading: { type: String, required: false },
+                subSubDescription: { type: String, required: false },
+              },
+            ],
+          },
+        ],
+      },
+    ],
   },
   { timestamps: true }
-); 
+);
 
-// const blogModel = mongoose?.models.Blog || model <BlogDocument>("Blogs", BlogSchema);
-const blogModel = mongoose?.models.Blog || mongoose.model("Blog", BlogSchema);
-export default blogModel;
+// Export Blog Model
+const BlogModel = models.Blogs || model<BlogDocument>("Blogs", BlogSchema);
+export default BlogModel;
