@@ -7,7 +7,14 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postbuild": "next-sitemap"
+    "vercel-build": "npm run build && npm run postbuild",
+    "postbuild": "cp -r public .next/standalone/public/ || true"
+  },
+  "engines": {
+    "node": "20.14.0"
+  },
+  "resolutions": {
+  "next": "15.0.0"
   },
   "dependencies": {
     "@babel/core": "^7.26.0",
@@ -15,7 +22,9 @@
     "@babel/preset-react": "^7.26.3",
     "@radix-ui/react-slot": "^1.1.1",
     "@types/mongoose": "^5.11.97",
+    "@types/next": "^9.0.0",
     "@types/nprogress": "^0.2.3",
+    "@vercel/next": "^4.7.7",
     "bcryptjs": "^2.4.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -23,14 +32,15 @@
     "lucide-react": "^0.469.0",
     "mongodb": "^6.14.2",
     "mongoose": "^8.9.5",
-    "next": "15.1.3",
+    "next": "^15.3.1",
     "next-auth": "^4.24.11",
     "next-sitemap": "^4.2.3",
     "nprogress": "^0.2.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
     "tailwind-merge": "^2.6.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "vercel": "^41.6.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

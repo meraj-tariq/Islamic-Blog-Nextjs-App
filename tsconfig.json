@@ -1,49 +1,67 @@
 {
   "compilerOptions": {
-    "target": "esnext", // Target the latest ECMAScript version
-    "lib": ["dom", "dom.iterable", "esnext"], // Include DOM and ESNext libraries
-    "allowJs": true, // Allow JavaScript files to be compiled
-    "skipLibCheck": true, // Skip type checking of declaration files
-    "strict": true, // Enable all strict type-checking options
-    "noEmit": true, // Do not emit output files (Next.js handles this)
-    "esModuleInterop": true, // Enable ES module interoperability
-    "module": "esnext", // Use ES modules
-    "moduleResolution": "bundler", // Use the bundler module resolution strategy
-    "resolveJsonModule": true, // Allow importing JSON modules
-    "isolatedModules": true, // Ensure each file can be transpiled independently
-    "jsx": "preserve", // Preserve JSX syntax (Next.js handles JSX transformation)
-    "incremental": true, // Enable incremental compilation
-    "forceConsistentCasingInFileNames": true, // Ensure consistent file name casing
-    "strictPropertyInitialization": false, // Disable strict property initialization
-    "strictNullChecks": true, // Enable strict null checks
-    "exactOptionalPropertyTypes": false, // Disable exact optional property types
-    "allowSyntheticDefaultImports": true, // Allow synthetic default imports
+    "target": "esnext",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "forceConsistentCasingInFileNames": true,
+    "strictPropertyInitialization": false,
+    "strictNullChecks": true,
+    "exactOptionalPropertyTypes": false,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"], // Alias for src directory
-      "@models/*": ["./src/models/*"], // Alias for models directory
-      "@app/*": ["./src/app/*"], // Alias for app directory
-      "@images/*": ["public/assets/images/*"], // Alias for images directory
-      "@utils/*": ["src/helpers/*"] // Alias for utils/helpers directory
+      "@/*": [
+        "src/*"
+      ],
+      "@models/*": [
+        "src/models/*"
+      ],
+      "@app/*": [
+        "src/app/*"
+      ],
+      "@images/*": [
+        "public/assets/images/*"
+      ],
+      "@utils/*": [
+        "src/helpers/*"
+      ]
     },
-    "baseUrl": ".", // Base directory for path resolution
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/types"
+    ],
     "plugins": [
       {
-        "name": "next" // Next.js TypeScript plugin
+        "name": "next"
       }
     ]
   },
   "include": [
-    "next-env.d.ts", // Include Next.js environment types
-    "**/*.ts", // Include all TypeScript files
-    "**/*.tsx", // Include all TypeScript JSX files
-    ".next/types/**/*.ts", // Include Next.js generated types
-    "next-sitemap.config.js", // Include next-sitemap configuration
-    "src/components/SessionProvider.tsx", // Include specific component
-    "src/**/*.ts", // Include all TypeScript files in src
-    "src/**/*.tsx" // Include all TypeScript JSX files in src
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "next-sitemap.config.js",
+    "src/components/SessionProvider.tsx",
+    "src/**/*.ts",
+    "src/**/*.tsx"
   ],
   "exclude": [
-    "node_modules", // Exclude node_modules
-    "dist" // Exclude dist directory
+    "node_modules",
+    "dist"
   ]
 }
