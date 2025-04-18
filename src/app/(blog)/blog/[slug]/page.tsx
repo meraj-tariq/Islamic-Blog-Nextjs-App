@@ -56,19 +56,17 @@ async function fetchBlog(slug: string): Promise<Blog | null> {
 interface PageProps {
   params: Promise<{
     slug: string;
-  }>; // Params are expected to be a Promise
+  }>; 
 }
 
 const BlogDetailPage = async ({ params }: PageProps) => {
-  // Wait for the params to resolve and access the slug
-  const resolvedParams = await params; // Await the promise to resolve
+  const resolvedParams = await params;
   const { slug } = resolvedParams;
 
-  // Fetch the blog data using the fetchBlog function
   const blog = await fetchBlog(slug);
 
   if (!blog) {
-    return <div>Blog not Found!</div>; // If no blog is found
+    return <div>Blog not Found!</div>;
   }
 
   return (
