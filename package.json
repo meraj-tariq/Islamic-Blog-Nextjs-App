@@ -5,17 +5,9 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "vercel-build": "npm run build && npm run postbuild",
-    "postbuild": "cp -r public .next/standalone/public/ || true"
+    "start": "next start"
   },
-  "engines": {
-    "node": "20.14.0"
-  },
-  "resolutions": {
-  "next": "15.0.0"
-  },
+ 
   "dependencies": {
     "@babel/core": "^7.26.0",
     "@babel/preset-env": "^7.26.0",
@@ -38,9 +30,10 @@
     "nprogress": "^0.2.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "sharp": "^0.34.1",
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
-    "vercel": "^41.6.1"
+    "vercel": "^25.2.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

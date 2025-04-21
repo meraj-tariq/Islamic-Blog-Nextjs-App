@@ -1,19 +1,8 @@
-import { NextConfig } from "next";
+import { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-   output: 'standalone',
-   experimental: {
-    optimizePackageImports: [],
-  },
-  typescript: {
-    ignoreBuildErrors: true // Temporary if you have TS errors
-  },
   reactStrictMode: true,
   images: {
-    unoptimized: true,
     domains: [
       "localhost",
       "hebbkx1anhila5yf.public.blob.vercel-storage.com",
