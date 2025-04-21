@@ -40,7 +40,7 @@ export default function Services() {
   ];
 
   const handleBlogsRoute = (slug: string) => {
-    router.push(`/blog/${slug}`);
+    router.push(`/blogs/${slug}`);
   };
 
   return (
