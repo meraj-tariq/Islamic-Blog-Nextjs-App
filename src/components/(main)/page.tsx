@@ -1,5 +1,5 @@
 import Head from "next/head";
-import HomeLayout from "@/app/(main)/layout";
+import HomeLayout from "@/components/(main)/layout";
 
 export default function DashBoard() {
   return (
