@@ -40,9 +40,11 @@ export default function Services() {
   ];
 
   const handleBlogsRoute = (slug: string) => {
-    router.push(`/blog/${slug}`);
+    router.push(`/blogs/${slug}`);
   };
 
+  console.log("rebuild");
+  
   return (
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">

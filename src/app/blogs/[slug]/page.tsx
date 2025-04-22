@@ -53,13 +53,15 @@ async function fetchBlog(slug: string): Promise<Blog | null> {
   }
 }
 
-interface PageProps {
-  params: Promise<{
-    slug: string;
-  }>; 
-}
+// interface PageProps {
+//   params: Promise<{
+//     slug: string;
+//   }>; 
+// }
 
-const BlogDetailPage = async ({ params }: PageProps) => {
+const BlogDetailPage = async ({ params }: {
+  params: Promise<{slug: string}>
+}) => {
   const resolvedParams = await params;
   const { slug } = resolvedParams;
 
