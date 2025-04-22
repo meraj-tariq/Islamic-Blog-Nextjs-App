@@ -29,9 +29,7 @@ interface Blog {
 }
 
 async function fetchBlog(slug: string): Promise<Blog | null> {
-  const baseUrl =
-    process.env.NEXT_PUBLIC_BASE_URL ||
-    `http://localhost:${process.env.PORT || 3000}`;
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
   const apiUrl = `${baseUrl}/api/blogs/${slug}`;
   console.log({ apiUrl });
@@ -56,11 +54,13 @@ async function fetchBlog(slug: string): Promise<Blog | null> {
 // interface PageProps {
 //   params: Promise<{
 //     slug: string;
-//   }>; 
+//   }>;
 // }
 
-const BlogDetailPage = async ({ params }: {
-  params: Promise<{slug: string}>
+const BlogDetailPage = async ({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
 }) => {
   const resolvedParams = await params;
   const { slug } = resolvedParams;
