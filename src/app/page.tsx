@@ -1,11 +1,11 @@
 import Head from "next/head";
-import HomePage from "@/components/(main)/layout";
+import HomePage from "@/components/dashboard/index";
 
 export default function Home() {
   return (
     <div>
       <Head>
-        <title>Your Site Title</title>
+        <title>Islamic Center</title>
         <meta
           name="description"
           content="A brief description of your website."
